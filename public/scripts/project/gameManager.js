@@ -298,7 +298,7 @@ export default class ManagerGame extends EventTarget {
 		
 		let count = 64;
 		const timer = function() {
-			--count;
+			count -= this.runtime.dt/0.0166;
 			if (count <= 0) {
 				this.dispatch(`stats-${date}`, 'hide');
 			} else {
@@ -353,7 +353,7 @@ export default class ManagerGame extends EventTarget {
 		
 		let count = 80;
 		const timer = async function() {
-			--count;
+			count -= this.runtime.dt/0.0166;
 			if (count <= 0) {
 				this.dispatch(`achievment-${name}`, 'hide');
 			} else {
@@ -406,7 +406,7 @@ export default class ManagerGame extends EventTarget {
 				
 		let count = 150;
 		const timer = async function() {
-			--count;
+			count -= this.runtime.dt/0.0166;
 			if (count <= 0) {
 				this.dispatch(`info-${date}`, 'hide');
 			} else {
