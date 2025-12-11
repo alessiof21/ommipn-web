@@ -1,0 +1,29 @@
+<info>
+volume = example
+title = Example
+</info>
+
+<module-js>
+searching from './addScripts/superSearching.js'
+</module-js>
+
+<variables>
+test = {one: false, two: false}
+ok = true
+name = ''
+names = ['Л.Вайз', 'Вайз', 'вайз', 'л.вайз']
+</variables>
+
+<scripts>
+label start:
+nrt "Спасибо большое Сове за «Елочки», а также за дефис - , среднее тире – , длинное тире —"
+
+b-shadowOn
+b-on r_mal
+on dzh left1
+
+off dzh
+m% searching mainSearch() %
+
+nrt "Я собирался порыться в тумбочке, но палец сильно обожгло: свечной огарок подошел к своему логическому завершению. Да и времени, честно заметить, прошло достаточно. Настала пора покинуть комнату и схорониться в своих покоях до ужина."
+</scripts>

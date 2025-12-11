@@ -1,0 +1,1768 @@
+{
+	"main" : {
+		"os" : null, 
+		"systemInfo" : null, 
+		"type" : null,
+		"browserEngine" : null,
+		"renderer" : null,
+		"rendererDetail" : null,
+		"exportType" : null,
+		"env" : "production", 
+		"resolution" : [1920, 1080],
+		"canvasSize" : [1920, 1080],
+		"version" : "1.0.0"
+	},
+	"platforms" : [
+		{"device": "Android", "platform": "Android"},
+		{"device": "iPhone", "platform": "iPhone"},
+		{"device": "iPad", "platform": "iPad"},
+		{"device": "Symbian", "platform": "Symbian"},
+		{"device": "Windows Phone", "platform": "Windows Phone"},
+		{"device": "Tablet OS", "platform": "Tablet OS"},
+		{"device": "Linux", "platform": "Linux"},
+		{"device": "Windows", "platform": "Windows NT"},
+		{"device": "Macintosh", "platform": "Macintosh"}
+	],
+	"achievements" : {
+			"ch1-fall" : false,
+			"ch1-nofall" : false,
+			"ch2-yad" : false,
+			"ch4-base" : false,
+			"ch4-nobase" : false,
+			"ch5-mus" : false,
+			"ch5-nomus" : false,
+			"ch5-kat" : false,
+			"ch6-sap1" : false,
+			"ch6-sap2" : false,
+			"ch6-tat" : false,
+			"ch9-sci" : false,
+			"ch9-nat" : false,
+			"ch9-nofall" : false,
+			"ch9-react" : false,
+			"ch10-true" : false,
+			"ch10-false" : false
+	},
+	"options" : {
+		"chapter" : "chapter1",
+		"label" : "start",
+		"line": 0,
+		"temps" : [],
+		"variables" : {
+			"yadovMeet" : "",
+			"malininBook" : false,
+			"readMBook" : false,
+			"aboutMalinin" : false,
+			"kat" : "",
+			"ch3" : "",
+			"tatImpr" : false,
+			"clue" : "",
+			"angrySap" : false
+		},
+		"stats" : {
+			"respect" : 0
+		}
+	},
+	"settings" : {
+		"languages" : {
+			"ru" : "Русский"			
+		}
+	},
+	"initialization": {
+		"backgrounds" : {
+			"dinnerSupper" : {
+				"name" : "dins",
+				"dictionary" : {
+					"ru" : "Столовая"
+				}
+			},
+			"dinnerDark" : {
+				"name" : "dind",
+				"dictionary" : {
+					"ru" : "Столовая"
+				}
+			},
+			"dinnerMorning" : {
+				"name" : "dinm",
+				"dictionary" : {
+					"ru" : "Столовая"
+				}			
+			},
+			"carriageCrew" : {
+				"name" : "car",
+				"power" : true,
+				"dictionary" : {
+					"ru" : "Экипаж"
+				}			
+			},
+			"carriageCrewStatic" : {
+				"name" : "carStatic",
+				"dictionary" : {
+					"ru" : "Экипаж"
+				}			
+			},
+			"basement" : {
+				"name" : "base",
+				"dictionary" : {
+					"ru" : "Подвал"
+				}			
+			},
+			"cabinet" : {
+				"name" : "cab",
+				"dictionary" : {
+					"ru" : "Кабинет"
+				}
+			},
+			"street" : {
+				"name" : "str",
+				"power" : true,
+				"dictionary" : {
+					"ru" : "Улица"
+				}
+			},
+			"streetStatic" : {
+				"name" : "strStatic",
+				"dictionary" : {
+					"ru" : "Улица"
+				}
+			},
+			"roomZhilin" : {
+				"name" : "r_zh",
+				"dictionary" : {
+					"ru" : "Комната Жилина"
+				}
+			},
+			"leftCorridorNight" : {
+				"name" : "lcorn",
+				"dictionary"	: {
+					"ru" : "Левый коридор"
+				}			
+			},
+			"leftCorridorMorning" : {
+				"name" : "lcorm",
+				"dictionary"	: {
+					"ru" : "Левый коридор"
+				}				
+			},
+			"rightCorridor" : {
+				"name" : "rcor",
+				"dictionary"	: {
+					"ru" : "Правый коридор"
+				}				
+			},
+			"secondFloorCorridorEveningStart" : {
+				"name" : "sfcorevSt",
+				"dictionary" : {
+					"ru" : "Коридор второго этажа"
+				}
+			},
+			"secondFloorCorridorMorning1" : {
+				"name": "sfcorm1",
+				"dictionary" : {
+					"ru" : "Коридор второго этажа"
+				}
+			},
+			"secondFloorCorridorMorning2" : {
+				"name" : "sfcorm2",
+				"dictionary" : {
+					"ru" : "Коридор второго этажа"
+				}
+			},
+			"secondFloorCorridorEvening1" : {
+				"name" : "sfcorev1",
+				"dictionary" : {
+					"ru" : "Коридор второго этажа"
+				}
+			},
+			"secondFloorCorridorEvening2" : {
+				"name" : "sfcorev2",
+				"dictionary" : {
+					"ru" : "Коридор второго этажа"
+				}
+			},
+			"roomScientist" : {
+				"name" : "r_sci",
+				"dictionary" : {
+					"ru" : "Комната ученого"
+				}		
+			},
+			"roomSapogovs" : {
+				"name" : "r_sap",
+				"dictionary" : {
+					"ru" : "Комната четы Сапоговых"
+				}
+			},
+			"veranda" : {
+				"name" : "ver",
+				"power" : true,
+				"dictionary" : {
+					"ru" : "Веранда"
+				}
+			},
+			"verandaStatic" : {
+				"name" : "verStatic",
+				"dictionary" : {
+					"ru" : "Веранда"
+				}
+			},
+			"scientistInRoom" : {
+				"name" : "t_sci",
+				"dictionary" : {
+					"ru" : "Комната ученого"
+				}
+			},
+			"murderScene" : {
+				"name" : "murd",
+				"dictionary" : {
+					"ru" : "Комната Ядова"
+				}
+			},
+			"doorway" : {
+				"name" : "dway",
+				"dictionary" : {
+					"ru" : "Дверной проем в комнату Ядова"
+				}
+			},
+			"laundryRoom" : {
+				"name": "r_laundry",
+				"dictionary" : {
+					"ru" : "Прачечная"
+				}
+			},
+			"clueZac1" : {
+				"name" : "c_zac",
+				"dictionary" : {
+					"ru" : "Обыск комнаты Захара"
+				}			
+			},
+			"clueSapogov" : {
+				"name" : "c_sap",
+				"dictionary" : {
+					"ru" : "Обыск комнаты Сапоговых"
+				}			
+			},
+			"clueScientist" : {
+				"name" : "c_sci",
+				"dictionary" : {
+					"ru" : "Обыск комнаты Ученого"
+				}			
+			},
+			"clueRosa" : {
+				"name" : "c_ros",
+				"dictionary" : {
+					"ru" : "Обыск комнаты музыкантов"
+				}
+			},
+			"clueNatalia" : {
+				"name" : "c_nat",
+				"dictionary" : {
+					"ru" : "Обыск комнаты Наталии"
+				}			
+			},
+			"clueHousemaid" : {
+				"name" : "c_hm",
+				"dictionary" : {
+					"ru" : "Обыск комнаты горничной"
+				}				
+			},
+			"kitchen" : {
+				"name" : "r_kitch1",
+				"dictionary" : {
+					"ru" : "Кухня"
+				}
+			},
+			"kitchenWithGvidon" : {
+				"name" : "r_kitch2",
+				"dictionary" : {
+					"ru" : "Кухня"
+				}		
+			},
+			"roomMusic" : {
+				"name" : "r_mus",
+				"dictionary" : {
+					"ru" : "Комната музыкантов"
+				}
+			},
+			"roomMalinin" : {
+				"name" : "r_mal",
+				"dictionary" : {
+					"ru" : "Комната Малинина"
+				}
+			},
+			"zhilinInCloset" : {
+				"name" : "zh_clos",
+				"dictionaty" : {
+					"ru" : "Жилин в шкафу"
+				}
+			},
+			"policeRespectNoone" : {
+				"name" : "polRN",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"policeDisrespectNoone" : {
+				"name" : "polDN",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"policeRespectNat" : {
+				"name" : "polRNat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectNat" : {
+				"name" : "polDNat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"policeRespectMus" : {
+				"name" : "polRMus",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectMus" : {
+				"name" : "polDMus",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeRespectSci" : {
+				"name" : "polRSci",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectSci" : {
+				"name" : "polDSci",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeRespectHm" : {
+				"name" : "polRHm",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectHm" : {
+				"name" : "polDHm",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeRespectSap" : {
+				"name" : "polRSap",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectSap" : {
+				"name" : "polDSap",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeRespectTat" : {
+				"name" : "polRTat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectTat" : {
+				"name" : "polDTat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeRespectZac" : {
+				"name" : "polRZac",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"policeDisrespectZac" : {
+				"name" : "polDZac",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"escapeHmAndSci" : {
+				"name" : "escHS",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"escapeMus" : {
+				"name" : "escMus",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"escapeNat" : {
+				"name" : "escNat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"escapeSaps" : {
+				"name" : "escSaps",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"escapeZac" : {
+				"name" : "escZac",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"hotelKat" : {
+				"name" : "hKat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"hotelKatAndSap" : {
+				"name" : "hKS",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"hotelSap" : {
+				"name" : "hSap",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"hotelNat" : {
+				"name" : "hNat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			},
+			"katGetHotel" : {
+				"name" : "gHKat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"KatLeaveHotel" : {
+				"name" : "lHKat",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"musAfter" : {
+				"name" : "musA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"hmAfter" : {
+				"name" : "hmA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"sciAfter" : {
+				"name" : "sciA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"sciAndHmAfter" : {
+				"name" : "SHA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"tateAfter" : {
+				"name" : "tatA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}	
+			},
+			"zacAfter" : {
+				"name" : "zacA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}				
+			},
+			"zhilinAfter" : {
+				"name" : "zhA",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}
+			},
+			"final" : {
+				"name" : "fin",
+				"dictionary" : {
+					"ru" : "Каст-сцена"
+				}			
+			}
+		},
+		"persons" : {
+			"driver" : {
+				"name" : "dr",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Извозчик"
+					}
+				}
+			},
+			"dressedZhilin" : {
+				"name" : "dzh",
+				"nrt" : true,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-н Жилин"
+					}
+				}			
+			},
+			"zhilin" : {
+				"name" : "zh",
+				"nrt" : true,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-н Жилин"
+					}
+				}
+			},				
+			"undressedZhilin" : {
+				"name" : "uzh",
+				"nrt" : true,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-н Жилин"
+					}
+				}			
+			},
+			"zachar" : {
+				"name" : "zac",
+				"nrt" : false,
+				"nick" : "nomeet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Захар"
+					},
+					"nomeet" : {
+						"ru" : "Наглец"
+					}
+				}			
+			},
+			"zina" : {
+				"name" : "zin",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Зинаида"
+					}
+				}	
+			},
+			"malinin" : {
+				"name" : "mal",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Малинин"
+					}
+				}	
+			},
+			"housemaid" : {
+				"name" : "hm",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Горничная"
+					}
+				}
+			},
+			"sapogov" : {
+				"name" : "sap",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-н Сапогов"
+					}
+				}
+			},
+			"dressedSapogov" : {
+				"name" : "dsap",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-н Сапогов"
+					}
+				}
+			},
+			"rosa" : {
+				"name" : "ro",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Лорд Роза"
+					}
+				}
+			},
+			"shershansky" : {
+				"name" : "sh",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Герцог Шершанский"
+					}
+				}
+			},
+			"gvidon" : {
+				"name" : "gv",
+				"nrt" : false,
+				"nick" : "nomeet",
+				"dictionary" : {
+					"nomeet" : {
+						"ru" : "Странный старец"
+					},
+					"meet" : {
+						"ru" : "Художник Гвидон"
+					}
+				}
+			},
+			"nenormKatamaranov" : {
+				"name" : "bkat",
+				"nrt" : false,
+				"nick" : "nomeet",
+				"dictionary" : {
+					"nomeet" : {
+						"ru" : "???"
+					},
+					"meet" : {
+						"ru" : "Катамаранов"
+					}
+				}
+			},
+			"middleKatamaranov" : {
+				"name" : "mkat",
+				"nrt" : true,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Катамаранов"
+					}
+				}	
+			},
+			"normKatamaranov" : {
+				"name" : "gkat",
+				"nrt" : true,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Катамаранов"
+					}
+				}
+			},
+			"tate" : {
+				"name" : "tat",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-жа Сапогова"
+					}
+				}
+			},
+			"dressedTate" : {
+				"name" : "dtat",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Г-жа Сапогова"
+					}
+				}		
+			},
+			"scientist" : {
+				"name" : "sci",
+				"nrt" : false,
+				"nick" : "nomeet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Ученый"
+					},
+					"nomeet" : {
+						"ru" : "Молодой человек"
+					}
+				}
+			},
+			"yadov" : {
+				"name" : "yad",
+				"nrt" : false,
+				"nick" : "meet",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Губернатор Ядов"
+					}
+				}
+			},
+			"natella" : {
+				"name" : "nat",
+				"nrt" : false,
+				"nick" : "mistake",
+				"dictionary" : {
+					"meet" : {
+						"ru" : "Наталья"
+					},
+					"nomeet" : {
+						"ru" : "Молодая девушка"
+					},
+					"mistake" : {
+						"ru" : "Горничная"
+					}
+				}
+			}
+		},
+		"pictures" : {
+			"shield" : {
+				"name" : "shield",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Поврежденный фамильный<br>герб семьи Малининых"
+				},
+				"inventory" : true,
+				"functions" : null			
+			},
+			"openedChest" : {
+				"name" : "o_chest",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Открытый сундук Малинина"
+				},
+				"functions" : null
+			},
+			"zhilinDadPhoto" : {
+				"name" : "zhDPh",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Старое фото моего отца.<br>Беру с собой на важные дела"
+				},
+				"inventory" : true,
+				"functions" : null
+			},
+			"malininBook" : {
+				"name" : "mbook",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Странная книженция.<br>Конфискована как улика"
+				},
+				"inventory" : true,
+				"functions" : null			
+			},
+			"clueZac2" : {
+				"name" : "photo_zac",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Разорванная фотография.<br>Висит в комнате Захара"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"clueTat": {
+				"name" : "photo_tat",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Утаенное фото отца<br>Госпожи Сапоговой"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"zac_notes": {
+				"name" : "n_zac",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Записулька из кармана<br>наглого консьержа"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"zhilinBlazer" : {
+				"name" : "zhBlazer",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Пиджак Жилина"
+				},
+				"functions" : null	
+			},
+			"clueKnife" : {
+				"name" : "cKnife",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Ножичек. Обронен<br>на месте преступления"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"clueGlove" : {
+				"name" : "cGlove",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Незнакомая перчатка.<br>Обнаружена у входа<br>в комнату Ядова"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"clueSecondGlove" : {
+				"name" : "cSecGlove",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Перчатка с инициалами.<br>Валялась в бельевой корзине"
+				},
+				"inventory" : true,
+				"functions" : null	
+			},
+			"clueSign" : {
+				"name" : "cSign",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Запись в долговой книге<br>Господина Ядова"
+				},
+				"inventory" : true,
+				"functions" : null			
+			},
+			"letter" : {
+				"name" : "let",
+				"layer" : "ui",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Письмо на мое имя.<br>Отправитель не значится"
+				},
+				"inventory" : true,
+				"functions" : null
+			},
+			"clueMalinin1" : {
+				"name" : "cMal1",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Обыск комнаты Малинина"
+				},
+				"functions" : null	
+			},
+			"clueMalinin2" : {
+				"name" : "cMal2",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Обыск комнаты Малинина"
+				},
+				"functions" : null	
+			},
+			"clueMalinin3" : {
+				"name" : "cMal3",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Обыск комнаты Малинина"
+				},
+				"functions" : null	
+			},
+			"clueMalinin4" : {
+				"name" : "cMal4",
+				"layer" : "preUi",
+				"stop" : false,
+				"dictionary" : {
+					"ru" : "Обыск комнаты Малинина"
+				},
+				"functions" : null	
+			}
+		},
+		"texts" : {
+			"text" : {
+				"text" : {
+					"size" : [1420, 180]
+				},
+				"name" : {
+					"size" : [560, 60]
+				},
+				"question" : {
+					"size" : [600, 156]
+				},
+				"option" : {
+					"size" : [900, 55]
+				},
+				"imageOption" : {
+					"size" : [218, 55]
+				},
+				"fieldButtonInputText" : {
+					"size" : [218, 55]
+				},
+				"fieldInputText" : {
+					"size" : [577, 55]
+				},
+				"fieldInputPlayerText" : {
+					"size" : [577, 55]
+				},
+				"language" : {
+					"size" : [290, 60]
+				},
+				"longMenuText" : {
+					"size" : [800, 550]
+				},
+				"menuText" : {
+					"size" : [669, 52]
+				},
+				"chapterText" : {
+					"size" : [700, 52]
+				},
+				"menuButtonText" : {
+					"size" : [444, 52]
+				},
+				"chapterDisplay" : {
+					"size" : [960, 100],
+					"otherFade" : [0, 1, 2]
+				},
+				"dialogText" : {
+					"size" : [580, 180]
+				},
+				"dialogBText" : {
+					"size" : [150, 40]
+				},
+				"achivementText" : {
+					"size" : [380, 30],
+					"otherFade" : [0, 1, 1]
+				},
+				"achivementName" : {
+					"size" : [280, 60],
+					"otherFade" : [0, 1, 1]
+				},
+				"statText" : {
+					"size" : [280, 40],
+					"otherFade" : [0, 1, 1]
+				},
+				"clueTestText" : {
+					"size" : [175, 140]
+				},
+				"testText" : {
+					"size" : [988, 224]
+				},
+				"testText2" : {
+					"size" : [900, 100]
+				},
+				"powerText" : {
+					"size" : [300, 120]
+				},
+				"infoText" : {
+					"size" : [440, 170],
+					"otherFade" : [0, 1, 1]
+				},
+				"credit" : {
+					"size" : [512, 128]
+				},
+				"inventory" : {
+					"size" : [480, 100]
+				},
+				"devInfo" : {
+					"size" : [880, 280]
+				},
+				"devConsole" : {
+					"size" : [880, 80]
+				}
+			}
+		},
+		"svgpictures" : {
+			"svgImage" : {
+				"an" : {
+					"name" : "analysis",
+					"size" : [1820, 1080],
+					"stop" : false,
+					"alt" : "",
+					"dictionary" : false,
+					"inventory" : true,
+					"functions" : null
+				},
+				"plan" : {
+					"name": "plan",
+					"size": [1820,1080],
+					"stop":true,
+					"alt":"",
+					"dictionary" : false,
+					"inventory" : true,
+					"functions" : {
+						"type" : "zoom"
+					}
+				},
+				"photoHm" : {
+					"name" : "photoHousemaid",
+					"size" : [1554, 922],
+					"stop" : false,
+					"alt" : "",
+					"dictionary": {
+						"ru" : "Старое фото матери горничной.<br>Трогательно"
+					},
+					"inventory" : true,
+					"functions":null
+				},
+				"let" : {
+					"name" : "letter",
+					"size" : [1287,764],
+					"stop" : false,
+					"dictionary" : {
+						"ru" : "Письмо на мое имя.<br>Отправитель не значится"
+					},
+					"alt" : "let",
+					"inventory" : true,
+					"functions" : null
+				},
+				"letMal" : {
+					"name" : "letterMalinin",
+					"size" : [1287,764],
+					"stop" : false,
+					"dictionary" : {
+						"ru" : "Письмо Малинину.<br>Сплошной криминал"
+					},
+					"alt" : "let",
+					"inventory" : true,
+					"functions" : null					
+				},
+				"repT" : {
+					"name" : "reportTrue",
+					"size" : [1554, 922],
+					"stop" : false,
+					"dictionary" : {
+						"ru" : "Финансовый отчет.<br>Настоящий"
+					},
+					"alt" : "let",
+					"inventory" : true,
+					"functions" : null						
+				},
+				"repF" : {
+					"name" : "reportFalse",
+					"size" : [1554, 922],
+					"stop" : false,
+					"dictionary" : {
+						"ru" : "Финансовый отчет.<br>Выглядит «чисто»"
+					},
+					"alt" : "let",
+					"inventory" : true,
+					"functions" : null						
+				},
+				"mobook" : {
+					"name" : "malininOpenBook",
+					"size" : [1554, 922],
+					"stop" : false,
+					"alt" : "",
+					"dictionary" : {
+						"ru" : "Странная книженция.<br>Конфискована как улика"
+					},
+					"inventory" : true,
+					"functions" : null
+				},
+				"lineN" : {
+					"name" : "timeline_night",
+					"size" : [1820,1080],
+					"stop" : true, 
+					"alt" : "",
+					"dictionary" : false,
+					"inventory" : true,
+					"functions" : {
+						"type" : "zoom"
+					}
+				}				
+			}
+		},
+		"sprites" : {
+			"clueTestField" : {
+				"name" : "t1Number"
+			},
+		    "question1Clue" : {
+				"name" : "t1q1"
+			},
+		    "question2Clue": {
+				"name" : "t1q2"
+			},
+		    "question3Clue": {
+				"name" : "t1q3"
+			},
+		    "question4Clue": {
+				"name" : "t1q4"
+			},
+		    "question5Clue": {
+				"name" : "t1q5"
+			},
+		    "question6Clue": {
+				"name" : "t1q6"
+			},
+		    "question7Clue": {
+				"name" : "t1q7"
+			},
+		    "question8Clue": {
+				"name" : "t1q8"
+			},
+		    "question9Clue": {
+				"name" : "t1q9"
+			},
+		    "question10Clue": {
+				"name" : "t1q10"
+			},
+		    "question11Clue": {
+				"name" : "t1q11"
+			},
+	        "question12Clue": {
+				"name" : "t1q12"
+			},
+		    "fieldInput": {
+				"name" : "fInput"
+			},
+		    "fieldImageQuestion":{
+				"name" : "i-cq"
+			},
+		    "phraseField": {
+				"name" : "fsay"
+			},
+		    "fieldName": {
+				"name" : "fname"
+			},
+		    "fieldNrt": {
+				"name" : "fnrt"
+			},
+		    "fieldQuestion": {
+				"name" : "fq"
+			},
+		    "food": {
+				"name" : "food"
+			},
+		    "question1Test2": {
+				"name" : "t2q1"
+			},
+		    "question2Test2": {
+				"name" : "t2q2"
+			},
+		    "question3Test2": {
+				"name" : "t2q3"
+			},
+		    "question4Test2": {
+				"name" : "t2q4"
+			},
+		    "question5Test2": {
+				"name" : "t2q5"
+			},
+		    "question6Test2": {
+				"name" : "t2q6"
+			},
+		    "question7Test2": {
+				"name" : "t2q7"
+			},
+		    "scales": {
+				"name" : "t2scale"
+			},
+		    "testPerson": {
+				"name" : "t2Person"
+			},
+		    "zhilinTestField": {
+				"name" : "t1fzhilin"
+			},
+		    "zhilinTestField2": {
+				"name" : "t2fzhilin"
+			},
+		    "dialog": {
+				"name" : "dialog"
+			},
+		    "dialogButton": {
+				"name" : "dialogB"
+			},
+			"killer" : {
+				"name" : "killer"
+			},
+			"choiceArrow" : {
+				"name" : "arrow"
+			},
+			"menuButton" : {
+				"name" : "menuB"
+			},
+			"fieldButtonInput" : {
+				"name" : "bInput",
+				"functions" : {
+					"type" : "button",
+					"arguments" : ["inputDone", "usual-noninventory-sound(c-button)"]
+				}
+			},
+			"fieldChoiceMenu" : {
+				"name" : "i-csb",
+				"functions" : {
+					"type" : "button",
+					"arguments" : ["chooseOption", "usual-noninventory-hover-sound(c-button)"]
+				
+				}
+			},
+			"fieldOption" : {
+				"name" : "fOption",
+					"functions" : {
+						"type" : "button",
+						"arguments" : ["chooseOption", "usual-noninventory-sound(c-button)"]
+					}
+			}, 
+			"searchOption" : {
+				"name" : "i-cO_rooms",
+				"functions" : {
+					"type" : "button",
+					"arguments" : ["chooseOption", "usual-noninventory-sound(c-button)"]
+				}
+			}
+		},
+		"htmls" : {
+			"htmlPic" : {
+				"pauseButton" : {
+					"size" : [165, 99],
+					"src" : "./ui/pauseButton.png",
+					"class" : "htmlpic",
+					"mobile" : 1.75,
+					"hover" : true
+				},
+				"audioButton" : {
+					"size" : [37, 37],
+					"src" : "./ui/audioButton.png",
+					"class" : "htmlpic",
+					"drag" : true
+				},
+				"powerButton" : {
+					"size" : [37, 37],
+					"src" : "./ui/audioButton.png",
+					"class" : "htmlpic"
+				},
+				"menuB" : {
+					"size" : [628, 106],
+					"src" : "./ui/menuButton.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"settingsMenuLine" : {
+					"size" : [466, 23],
+					"src" : "./ui/settingsMenuLine.png",
+					"class" : "htmlpic"
+				},
+				"audioScale" : {
+					"size" : [464, 15],
+					"src" : "./ui/audioScale.png",
+					"class" : "htmlpic"
+				},
+				"addSetB" : {
+					"size" : [342, 69],
+					"src" : "./ui/addSetB.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"settingsMenu": {
+					"size" : [897, 831],
+					"src" : "./ui/settingsMenu.png",
+					"class" : "htmlpic"
+				},
+				"invO" : {
+					"size" : [86, 84],
+					"src": "./ui/inventoryOpen.png",
+					"class" : "htmlpic",
+					"mobile" : 1.75,
+					"hover" : true
+				},
+				"invC" : {
+					"size" : [86, 84],
+					"src": "./ui/inventoryClose.png",
+					"class" : "htmlpic",
+					"mobile" : 1.75,
+					"hover" : true
+				},
+				"return" : {
+					"size" : [86, 84],
+					"src" : "./ui/returnArrow.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"powerScale" : {
+					"size" : [93, 51],
+					"src" : "./ui/powerScale.png",
+					"class" : "htmlpic"
+				},
+				"langAL" : {
+					"size" : [42, 45],
+					"src" : "./ui/languageArrowL.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"langAR" : {
+					"size" : [42, 45],
+					"src" : "./ui/languageArrowR.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"bigAL" : {
+					"size" : [195, 204],
+					"src" : "./ui/bigArrowL.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"bigAR" : {
+					"size" : [195, 204],
+					"src" : "./ui/bigArrowR.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"fStat": {
+					"size" : [480, 128],
+					"src" : "./ui/fStat.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]
+				},
+				"respectInc" : {
+					"size" : [56, 36],
+					"src" : "./ui/statRespect.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]
+				},
+				"respectDec" : {
+					"size" : [56, 36],
+					"src" : "./ui/statDisrespect.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]
+				},
+				"fAch" : {
+					"size" : [488, 296],
+					"src" : "./ui/fAchievement.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]
+				},
+				"lAch" : {
+					"size" : [314, 22],
+					"src" : "./ui/LineAchievement.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]
+				},
+				"fieldInfo" : {
+					"size" : [640, 256],
+					"src" : "./ui/fieldInfo.png",
+					"class" : "htmlpic",
+					"otherFade" : [0, 1, 1]				
+				},
+				"powerInfo": {
+					"size" : [56, 42],
+					"src" : "./ui/powerInfo.png",
+					"class" : "htmlpic",
+					"hover" : true
+				},
+				"powerField": {
+					"size" : [369, 143],
+					"src" : "./ui/powerField.png",
+					"class" : "htmlpic"
+				},
+				"invDescription" : {
+					"size" : [512, 116],
+					"src" : "./ui/invDescription.png",
+					"class" : "htmlpic"
+				},
+				"svgReturn" : {
+					"size" : [103, 103],
+					"src" : "./ui/svgReturn.png",
+					"class" : "htmlpic",
+					"hover" : true
+ 				},
+				"devInfo" : {
+					"size" : [960, 300],
+					"src" : "./ui/devInfo.png",
+					"class" : "htmlpic"					
+				},
+				"devConsole" : {
+					"size" : [960, 450],
+					"src" : "./ui/devConsole.png",
+					"class" : "htmlpic"					
+				},
+				"devText" : {
+					"size" : [1280, 720],
+					"src" : "./ui/devText.png",
+					"class" : "htmlpic"
+				},
+				"dialog": {
+					"size" : [724, 321],
+					"src" : "./ui/dialog.png",
+					"class" : "htmlpic"
+				},
+		    	"dialogB": {
+					"size" : [203, 48],
+					"src" : "./ui/dialogButton.png",
+					"class" : "htmlpic",
+					"hover" : true
+				}
+			}
+			
+		}
+	},
+	"managerGame" : {
+		"positions" : {
+			"left1" : [220, 1080],
+			"left1_5" : [300, 1080],
+			"left2" : [420, 1080],
+			"left3" : [620, 1080],
+			"left4" : [700, 1080],
+			"center1" : [840, 1080],
+			"center2" : [900, 1080],
+			"center3" : [960, 1080],
+			"center4" : [1020, 1080],
+			"center5" : [1080, 1080],
+			"right1" : [1700, 1080],
+			"right1_5" : [1620, 1080],
+			"right2" : [1500, 1080],
+			"right3" : [1300, 1080]			
+		},
+		"inputs" : {
+			"playerInput" : {
+				"size" : [580, 56],
+				"placeholder" : {
+					"ru" : "Введите текст"
+				},
+				"maxLength" : 15,
+				"buttonText" : {
+					"ru" : "Вот так!"
+				}
+			}
+		},
+		"stats" : {
+			"respect" : {
+				"ru" : "Авторитет",
+				"en" : "Respect"
+			}			
+		},
+		"achievements" : {
+			"ch1-fall" : {
+				"ru" : "Первый промах",
+				"en" : "First mistake"				
+			}, 
+			"ch1-nofall" : {
+				"ru" : "Неваляшка",
+				"en" : "Tumbler"			
+			},
+			"ch2-yad" : {
+				"ru" : "Безработный",
+				"en" : "Unemployed"			
+			},
+			"ch4-base" : {
+				"ru" : "Нежилец",
+				"en" : ""
+			},
+			"ch4-nobase" : {
+				"ru" : "Скептик",
+				"en" : ""
+			},
+			"ch5-mus" : {
+				"ru" : "Супергерой",
+				"en" : ""
+			},
+			"ch5-nomus" : {
+				"ru" : "равноДУШНЫЙ",
+				"en" : ""
+			},
+			"ch5-kat" : {
+				"ru" : "Законодатель мод",
+				"en" : ""
+			},
+			"ch6-sap1" : {
+				"ru" : "Острый язык",
+				"en" : ""
+			}, 
+			"ch6-sap2" : {
+				"ru" : "Маленькая глупость",
+				"en" : ""
+			},
+			"ch6-tat" : {
+				"ru" : "Полиглотатель",
+				"en" : ""
+			},
+			"ch9-sci" : {
+				"ru" : "Стальной взгляд",
+				"en" : ""
+			},
+			"ch9-nat" : {
+				"ru" : "Неудачливая сваха",
+				"en" : ""
+			},
+			"ch9-nofall" : {
+				"ru" : "Не упал",
+				"en" : ""
+			},
+			"ch9-react" : {
+				"ru" : "Реактивный реактолог",
+				"en" : ""
+			},
+			"ch10-true" : {
+				"ru" : "Величайший детектив",
+				"en" : ""
+			},
+			"ch10-false" : {
+				"ru" : "Величайший шоумен",
+				"en" : ""
+			}
+		},
+		"info" : {
+			"ch1-hotel" : {
+				"ru" : "Здесь что-то не совсем чисто! Стоит проверить"
+			},
+			"ch2-sci" : {
+				"ru" : "Воздух вокруг Господ горячее утюга! Кажется, назревает конфликт"
+			},
+			"ch2-yad" : {
+				"ru" : "Ой-ой, Господин Ядов не чайник, но я вижу, что он закипел!"
+			},
+			"ch3-sat1" : {
+				"ru" : "Господин Сапогов настроен воинственно! Кто его так разозлил?"
+			},
+			"ch3-sci" : {
+				"ru" : "Вот он писака, оказывается! Любопытно..."
+			},
+			"ch3-nat" : {
+				"ru" : "Похоже, у Захара и Натальи какие-то планы на вечер!"
+			},
+			"ch3-sat2" : {
+				"ru" : "А фигляр был бы не против тут всем заправлять!"
+			},
+			"ch3-mal" : {
+				"ru" : "Вот это увлечение! Будь моя воля, «закрыл» бы за такое надолго!"
+			},
+			"ch4-gv" : {
+				"ru" : "Так-так! Ричард может получить наследство, если дарственная утеряна?"
+			},
+			"ch4-kat" : {
+				"ru" : "Вот так соседушка! Неужели его никто не замечает?"
+			},
+			"ch4-motivation" : {
+				"ru" : "Интересно, повлиял ли я на него?"
+			},
+			"ch5-uzh" : {
+				"ru" : "Странно, но в голове пусто. Совсем ничего"
+			},
+			"ch5-murder" : {
+				"ru" : "Оба покойничка убиты из Смит-Вессона!"
+			},
+			"ch5-comp" : {
+				"ru" : "Господа что-то не поделили?"
+			},
+			"ch5-debt" : {
+				"ru" : "Последний заемщик Ядова — Л.Вайз. Не припомню таких..."
+			},
+			"ch5-theft" : {
+				"ru" : "Пропал неизвестный документ!"
+			},
+			"ch5-killer" : {
+				"ru" : "Кажется, убийца среди нас!"
+			},
+			"ch6-sci" : {
+				"ru" : "Ученый и Тате выходили из комнаты!"
+			},
+			"ch6-sap1" : {
+				"ru" : "Пил ли Ричард снотворное?"
+			},
+			"ch6-sap2" : {
+				"ru" : "Кажется, Сапогов больше не захочет давать показания"
+			},
+			"ch6-tat" : {
+				"ru" : "Ночью горничная ушла в левое крыло!"
+			},
+			"ch6-mus" : {
+				"ru" : "Показания не съезжа...сходятся. Так 2 или 3 раза?"
+			},
+			"ch6-zac" : {
+				"ru" : "Слабоватое алиби для дружка Натальи!"
+			},
+			"ch6-hm" : {
+				"ru" : "Выходит, Господа ночью все же ссорились!"
+			},
+			"ch6-kat" : {
+				"ru" : "Новый помощник! Хоть у этого парниши есть алиби"
+			},
+			"ch9-sci" : {
+				"ru" : "Ночью здесь развивалась, так сказать, драма! Кто-то из дам об этом умолчал"
+			},
+			"ch9-sap" : {
+				"ru" : "Холеный знает о женушке больше, чем говорит!"
+			},
+			"ch9-musAll" : {
+				"ru" : "А вот и тайна разорванного документика раскрылась!"
+			},
+			"ch9-musNotAll" : {
+				"ru" : "Я знал, что из этой комнаты ночью все же совершали выползки!"
+			},
+			"ch9-zac": {
+				"ru" : "Ножичек-то все же его! А вот перчатки — нет"
+			},
+			"ch9-tat" : {
+				"ru" : "Балерина все-таки умолчала о том, что поднималась в комнату!"
+			},
+			"ch9-nat" : {
+				"ru" : "Выходит, обманул Захар! Не сказал, что ГС — его брат. Какой был смысл это утаивать?"
+			},
+			"ch9-hm" : {
+				"ru" : "Неужели в этом заведении мог храниться еще один револьвер?"
+			},
+			"ch9-laun" : {
+				"ru" : "Не знал, что поступил как болван, забыв свой револьвер, но это и не важно уже!"
+			},
+			"ch10-goodFalse" : {
+				"ru" : "Чувствую, мое выступление произвело впечатление!"
+			},
+			"ch10-badFalse" : {
+				"ru" : "Звучал я, прямо скажем, не то чтобы очень убедительно"
+			},
+			"ch10-highRespect" : {
+				"ru" : "Мой авторитет имеет вес!"
+			},
+			"ch10-lowRespect" : {
+				"ru" : "Мое мнение не авторитетно для полиции!"
+			}
+		}
+	},
+	"audioManager" : {
+		"sound" : {
+			"ach": "achievment",
+			"stat" : "stat",
+			"info" : "info",
+			"s-chapter" : "startChapter",
+			"horse" : "horse",
+			"h-go" : "horseGo",
+			"h-stop" : "horseStop",
+			"h-leave" : "horseLeave",
+			"inv" : "inventory",
+			"a-inv" : "addInventory",
+			"env" : "openEnvelope",
+			"let" : "letter",
+			"u-paper" : "unfoldingPaper",
+			"knock" : "knock",
+			"champ" : "champagne",
+			"o-book" : "openBook",
+			"p-book" : "pageBook",
+			"h-table" : "heatTable",
+			"ac-seat" : "armchairSeat",
+			"c-seat" : "chairSeat",
+			"c-stand" : "chairStand",
+			"f-chair" : "fallChair",
+			"o-news": "openNewspaper",
+			"f-tex" : "fallTextile",
+			"m-tex" : "moveTextile",
+			"w-steps" : "woodSteps",
+			"c-steps" : "carpetSteps",
+			"qw-steps" : "quietWoodSteps",
+			"w-run" : "woodRun",
+			"b-glass" : "breakGlass",
+			"step-b-glass" : "steppedOnBrokenGlass",
+			"shoot1" : "shoot1",
+			"h-win" : "heatWindow",
+			"c-win" : "closeWindow",
+			"cough" : "cough",
+			"p-bottles" : "pushBottles",
+			"rust" : "rustle",
+			"p-liquid" : "pourLiquid",
+			"pen" : "pen",
+			"s-pen" : "shortPen",
+			"c-t-paper" : "crumpledThrewPaper",
+			"s-paper" : "sortPaper",
+			"o-shelf" : "openShelf",
+			"t-o-shelf" : "tryOpenShelf",
+			"o-drawer" : "openDrawer",
+			"c-drawer" : "closeDrawer",
+			"r-sand" : "removeSand",
+			"fire" : "fireplace",
+			"c-creakyDoor1" : "closeCreakyDoor1",
+			"o-creakyDoor1" : "openCreakyDoor1",
+			"c-door1" : "closeDoor1",
+			"o-door1" : "openDoor1",
+			"c-door2" : "closeDoor2",
+			"c-door3" : "closeDoor3",
+			"c-oldDoor1" : "closeOldDoor1",
+			"o-oldDoor1" : "openOldDoor1",
+			"door1" : "door1",
+			"door2" : "door2",
+			"l-candle" : "lightCandle",
+			"walk-snow" : "snowWalk",
+			"curt" : "curtain",
+			"h-wood" : "heatWood",
+			"s-jump" : "snowJump",
+			"w-fall" : "woodFall",
+			"plate" : "plate",
+			"t-spoon" : "throwSpoon",
+			"c-fan" : "closeFan",
+			"t-fan" : "throwFan",
+			"f-metal" : "fallMetal",
+			"c-fingers" : "crackingFingers",
+			"m-head" : "metalHead",
+			"exclam" : "exclamation",
+			"guitar" : "guitar",
+			"t-thing" : "takeThing",
+			"w-clothes" : "wetClothes",
+			"s-box" : "searchBox",
+			"c-button" : "clickButton",
+			"r-clock" : "ringClock",
+			"p-plate" : "putPlate",
+			"r-plate" : "removePlate",
+			"t-lock" : "tapLock",
+			"o-lock" : "openLock",
+			"r-lock" : "rotateLock",
+			"o-chest" : "openChest",
+			"i-carpet" : "interactCarpet",
+			"b-wood" : "bendWood",
+			"b-key" : "breakKey",
+			"f-bed" : "fallBed",
+			"snif" : "sniffling"
+		},
+		"music" : {
+			"int" : "intro",
+			"snow" : "snowstorm",
+			"drama1" : "drama1",
+			"quiet1" : "quiet1",
+			"quiet2" : "quiet2",
+			"susp1" : "suspicion1",
+			"susp2" : "suspicion2",
+			"insp1" : "inspection1",
+			"inter1" : "interrogation1",
+			"inter2" : "interrogation2",
+			"interRo" : "interrogationRo",
+			"det1" : "detective1",
+			"det2" : "detective2",
+			"det3" : "detective3",
+			"det4" : "detective4",
+			"det5" : "detective5",
+			"sud1" : "suddenness1",
+			"nau1" : "naughty1",
+			"fest1" : "festive1",
+			"search1" : "search1",
+			"search2" : "search2",
+			"base" : "basement",
+			"str1" : "strange1",
+			"mus" : "musicians",
+			"anx1" : "anxiety1",
+			"stress1" : "stress1",
+			"imp" : "important",
+			"win" : "win",
+			"cred" : "credits",
+			"end" : "end"
+		}
+	}
+}

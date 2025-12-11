@@ -1,0 +1,256 @@
+* {
+	/* Чтобы на iOs на Safari не возникало тени у элемента после нажатия */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@font-face {
+	font-family: 'Merriweather-Regular';
+	font-style: normal;
+	src: url("./fonts/Merriweather-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Merriweather-Bold';
+	font-style: bold;
+	src: url("./fonts/Merriweather-Bold.ttf");
+}
+
+@font-face {
+	font-family: 'Merriweather-Italic';
+	font-style: italic;
+	src: url("./fonts/Merriweather-Italic.ttf");
+}
+
+@font-face {
+	font-family: 'MTCORSVA';
+	font-style: italic;
+	src: url("./fonts/MTCORSVA.ttf");
+}
+
+::-moz-selection{
+    background-color: transparent
+}
+
+::selection{
+    background-color: transparent
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.text {
+	font-family: 'Merriweather-Regular', 'Merriweather-Bold', 'Merriweather-Italic';
+	font-size: min(3vmin, calc(3vmax / 16 * 9)); 
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	/*70, 52, 41 - rgb нового шрифта для всего кроме нрт*/
+	/* - rgb нового шрифта для nrt*/
+	/*color: rgb(234,234,234);*/
+}
+
+.text-hover {
+	font-size: min(3.3vmin, calc(3.3vmax / 16 * 9));
+}
+
+@keyframes apperance {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+}
+
+@keyframes hide {
+      0% { opacity: 1; }
+      100% { opacity: 0; }	
+}
+
+.fadeIn-03 {
+	animation-name: apperance;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.fadeIn-2 {
+	animation-name: apperance;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.fadeIn {
+	animation-name: apperance;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.fadeOut {
+	animation-name: hide;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.opacityShow {
+	animation-name: apperance;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.vmin1 {
+	font-size: min(1vmin, calc(1vmax / 16 * 9));
+}
+
+.vmin1_7 {
+	font-size: min(1.7vmin, calc(1.7vmax / 16 * 9));
+}
+
+.vmin2 {
+	font-size: min(2vmin, calc(2vmax / 16 * 9));
+}
+
+.vmin2_3 {
+	font-size: min(2.3vmin, calc(2.3vmax / 16 * 9));
+}
+
+.vmin2_5 {
+	font-size: min(2.5vmin, calc(2.5vmax / 16 * 9));;
+}
+
+.vmin3 {
+	font-size: min(3vmin, calc(3vmax / 16 * 9));
+}
+
+.vmin4 {
+	font-size: min(4vmin, calc(4vmax / 16 * 9));
+}
+
+.vmin5 {
+	font-size: min(5vmin, calc(5vmax / 16 * 9));
+}
+
+.vmin6 {
+	font-size: min(6vmin, calc(6vmax / 16 * 9));
+}
+
+.vmin7 {
+	font-size: min(7vmin, calc(7vmax / 16 * 9));	
+}
+
+.vmin8 {
+	font-size: min(8vmin, calc(8vmax / 16 * 9));	
+}
+
+.vmin9 {
+	font-size: min(9vmin, calc(9vmax / 16 * 9));
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.opac {
+	opacity: 0;
+}
+
+.medium {
+	font-size: min(4vmin, calc(4vmax / 16 * 9));
+}
+
+.clue {
+	font-family: 'Merriweather-Regular', 'Merriweather-Bold', 'Merriweather-Italic';
+	font-size:  min(9vmin, calc(9vmax / 16 * 9));
+	padding: 0;
+	margin: 0;
+	text-align: center;	
+}
+
+.chapter {
+	color: rgb(188, 188, 188);
+	font-size: 3vmin;
+}
+
+.chapter:hover {
+	color: rgb(255, 255, 255);
+	font-size: min(3.3vmin, calc(3.3vmax / 16 * 9));
+}
+
+.dialog2 {
+	font-size: min(2vmin, calc(2vmax / 16 * 9));
+}
+
+.dialog2Hover {
+	font-size: min(2.2vmin, calc(2.2vmax / 16 * 9));
+}
+
+.dialog3 {
+	font-size: min(3vmin, calc(3vmax / 16 * 9));	
+}
+
+.dialog3Hover {
+	font-size: min(3.3vmin, calc(3.3vmax / 16 * 9));
+}
+
+.black {
+	color: rgb(0, 0, 0);
+}
+
+.dark {
+	color: rgb(70, 52, 41);
+}
+
+.grey {
+	color: rgb(169,169,169);
+}
+
+.light {
+	color: rgb(234, 234, 234);
+}
+
+.white {
+	color: rgb(255, 255, 255);
+}
+
+.input {
+    border:none;
+    background:none;
+    outline:none;
+    padding:0;
+}
+
+.input::placeholder {
+	color: rgb(169,169,169);
+}
+
+#img_svg {
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.htmlpic {
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+}
+
+#video1 {
+	width: 100%;
+	height: 100%;
+}
+
+.loading {
+	background-color: black;
+	background-image: url('./loadingImage.gif');
+	background-size: cover;
+}
+
+/*.button { Сброс стиля кнопки*/
+/*  padding: 0;*/
+/* border: none;*/
+/* font: inherit;*/
+/* color: inherit;*/
+/* background-color: transparent;*/
+/* cursor: pointer;*/
+/*}*/
+
+

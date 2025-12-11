@@ -1,0 +1,327 @@
+<info>
+volume = VII
+title = Обыск
+</info>
+
+<module-js>
+searching from './addScripts/searching.js'
+</module-js>
+
+<variables>
+helpFromKat = false
+search = [false, false, false, false, false, false]
+room = ''
+det = ''	
+</variables>
+
+<scripts>
+label start: 
+b-on dinm
+on uzh left1
+nrt "Горничная любезно предоставила мне план отеля, на котором я уже успел отметить, где кто проживает."
+@audio-play quiet2
+
+svg-on plan 960 540
+
+nrt "К тому же я поломал головушку и основательно запротоколировал все описанные нашими подозрительными, так сказать, лицами похождения."
+
+svg-on lineN 960 540
+
+nrt "Настроение у меня было не то чтобы превосходное. Рыться в грязном бельишке часто вовсе не интересно. Но работа детектива требует жертв."
+
+show-if #kat !== 'bkat'
+	on #kat right1
+	say #kat "Я смотрю, Господин Жилин, Вы не слишком-то воодушевлены. Если нужна моя помощь, маякните!"
+	
+	choice "А вообще-то..."
+	option "Сделаю всё сам"
+		say uzh "Такой качественный детектив, как я в силах справиться с такими пустяками"
+	option "Помощь мне пригодится"
+		exp #helpFromKat = true
+		@say uzh smile "Я был бы рад, голубчик, если бы мы смогли разделиться."
+
+i-choice "Какую комнату следует обыскать следующей?"
+option i-cO_rooms r_nat if !#search[0]
+	exp #search[0] = true
+	exp #room = "nat"
+	goback label choiceDetective
+option i-cO_rooms r_mus if !#search[1]
+	exp #search[1] = true
+	exp #room = "mus"
+	goback label choiceDetective
+option i-cO_rooms r_sap if !#search[2]
+	exp #search[2] = true
+	exp #room = "sap"
+	goback label choiceDetective
+option i-cO_rooms r_sci if !#search[3]
+	exp #search[3] = true
+	exp #room = "sci"
+	goback label choiceDetective
+option i-cO_rooms r_hm if !#search[4]
+	exp #search[4] = true
+	exp #room = "hm"
+	goback label choiceDetective
+option i-cO_rooms r_zac if !#search[5]
+	exp #search[5] = true
+	exp #room = "zac"
+	goback label choiceDetective
+loop
+
+show-if #kat !== 'bkat'
+	nrt "Мы с Катамарановым вновь встретились в гостиной, чтобы, так сказать, поделиться находками и попытаться как-то двинуть следствие."
+show-else
+	nrt "Уставший, весь прямо взмокший и окончательно запутавшийся я вернулся в гостиную."
+
+say uzh 'М-да, дела... Тут так просто и не скажешь даже «кто», «куда», «чего» и «как»... Тут головой работать надо. Пора бы расчехлить свои, эти самые, серые клеточки что ли.'
+
+off #kat
+off uzh
+b-off dinm
+audio-stop quiet2
+go chapter chapter8
+
+label choiceDetective: 
+show-if #kat !== 'bkat' && #helpFromKat
+	choice "Кто пойдет осматривать комнату?"
+	option "Я"
+		exp #det = 'uzh'
+		say uzh "Голубчик, давайте в этот раз я осмотрю."
+	option "Жорж"
+		exp #det = #kat
+		say uzh "Жорж, мне нужна Ваша помощь! Осмотрите, пожалуйста."
+show-else
+	exp #det = 'uzh'
+	say uzh "Ну что ж, приступим к осмотру."
+
+off uzh
+off #kat
+go label #room
+
+label nat:
+audio-stop quiet2
+@audio-play search1
+b-on c_nat fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Удивительно, что комната дочери хозяина отеля располагается в крыле прислуги. Я не услышал ничего ужасного о ее взаимоотношениях с отцом, но кажется мне, что это не самый хороший знак.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Странно, что господин Малинин поселил дочурку в крыло прислуги, а единственную комнату рядом с собой оставил гостевой. Не думаю, что Наталья рада этому факту.»</i>'
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('nat') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Вся эта картина наводит мою светлую следовательскую голову на мысль, что Наталья могла иметь конфликт со своим батюшкой из-за дел сердечных.»</i>'
+	
+	@say #det angry '<i>«И кто знает, на что способна эта юная леди… Найти бы ее, да как допросить обо всем этом!»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«В воздухе этой комнаты все еще витает неприятное ощущение назревавшего конфликта в семье Малининых. Видимо, молодая особа не раз ослушивалась отца, встречаясь с неким Г.С.»</i>'
+	
+	say #det '<i>«Да и горничная говорила, что они стали чаще ссориться... Хорошо бы отыскать ее, чтобы обсудить... некоторые моменты»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты Натальи окончен."
+audio-stop search1
+@audio-play quiet2
+
+label mus:
+audio-stop quiet2
+@audio-play search2
+b-on c_ros fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	@say #det 'М-да, здесь царит «рабочая» атмосфера.'
+show-else
+	mirror #det
+	on #det left1
+	say #det "Почти как у меня в подвале."
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('mus') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Кроме порванного документа, собственно, подозрения ничего как-то и не вызывает...»</i>'
+	
+	say #det '<i>«Нужно будет допросить любезных господ дополнительно касательно этого документика.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«За исключением беспорядка, примечательного в комнате было мало. Только порванная расписка...»</i>'
+	
+	say #det '<i>«В следующий раз при беседе с господами следует обсудить этот момент.»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты Лорда и Герцога окончен."
+audio-stop search2
+@audio-play quiet2
+
+label sap: 
+audio-stop quiet2
+@audio-play det2
+b-on c_sap fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	@say #det smile "С утра ничего не изменилось, это хорошо." 
+show-else
+	mirror #det
+	on #det left1
+	say #det "Интересные аппартаменты."
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('sap') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Похоже, звезда сцены слукавила, сказав, что утеряла фото отца. Но с какой целью скрывать такую мелочь?»</i>'
+	
+	say #det angry '<i>«Еще те странные шушуканья, что я имел, скажем так, честь наблюдать  вчера... Думаю, стоит прижать некоторых личностей неудобными вопросиками.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Сдается мне, что госпожа Сапогова все же утаила от нас фотографию.»</i>'
+	
+	say #det '<i>«Возможно, она знает немного больше, чем говорит. А то и намного.»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты четы Сапоговых окончен."
+audio-stop det2
+@audio-play quiet2
+
+label sci:
+audio-stop quiet2
+@audio-play search1
+b-on c_sci fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Такая скромная комнатушка... Видимо, ученый стеснен в средствах...»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Симпатичная комната. Во всяком случае, уютнее моего подвала.»</i>'
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('sci') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det suspicious '<i>«Вроде, все в порядке, но... этот дурацкий платок, признание, встреча, на которую он торопился с ужина... Все это не дает мне какого-то покоя внутреннего.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Кажется, здесь все в порядке. Лично мне находки эти мало о чем говорят, а вот за Господина Жилина сказать не могу.»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты ученого окончен."
+audio-stop search1
+@audio-play quiet2
+
+label hm: 
+audio-stop quiet2
+@audio-play search2
+b-on c_hm fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«А здесь очень даже приятно. Уютненько так, хорошо прям.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Приятное местечко. Отчего-то кажется несколько просторнее прочих. А может, здесь просто меньше мебели.»</i>'
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('hm') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det '<i>«Не думаю, что отыщу здесь еще хоть что-то полезное... Но оно мне, в принципе, и не... как бы и не надо уже... Итак кое-какие вопросики назрели.»</i>'
+	
+	say #det suspicious '<i>«Стоит все же поговорить о ее прошлом.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Похоже, больше здесь ловить нечего. Надо рассказать Жилину про находки и двигаться дальше.»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты горничной окончен."
+audio-stop search2
+@audio-play quiet2
+
+label zac:
+audio-stop quiet2
+@audio-play det2
+b-on c_zac fogging
+animate #det suspicious
+show-if #det === 'uzh'
+	on #det left1
+	nrt "На мое удивление, в комнате было достаточно чисто. Подобное вряд ли можно было ожидать от такого человека, как Захар."
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>"В комнате этого болвана даже достаточно чисто, удивительно."</i>'
+
+nrt "Нужно хорошенько осмотреться."
+off #det
+
+m% searching main('zac') %
+
+show-if #det === 'uzh'
+	on #det left1
+	say #det angry '<i>«Мне он и раньше не нравился, а теперь, после всех этих записочек заговорщицких, я вообще думаю, что Захар тут у нас главный подозреваемый.»</i>'
+	
+	say #det '<i>«Еще не доказано, но это дело времени.»</i>'
+show-else
+	mirror #det
+	on #det left1
+	say #det '<i>«Что ж, до сих пор я не воспринимал Захара всерьез, но после того странного послания...»</i>'
+	
+	say #det '<i>«Не думаю, что стоит сбрасывать нахала со счетов.»</i>'
+
+off #det
+b-on dinm fogging
+on uzh left1
+if #kat !== 'bkat'
+	on #kat right1
+nrt "Обыск комнаты Захара окончен."
+audio-stop det2
+@audio-play quiet2
+</scripts>

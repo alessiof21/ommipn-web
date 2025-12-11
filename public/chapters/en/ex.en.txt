@@ -1,0 +1,22 @@
+<info>
+volume = example
+title = Example
+</info>
+
+<module-js>
+searching from './addScripts/searching.js'
+</module-js>
+
+<variables>
+name = ''
+value = 2
+</variables>
+
+<scripts>
+label start:
+nrt "Тест"
+b-on dinm
+
+nrt "После этой строчки - конец"
+
+</scripts>
