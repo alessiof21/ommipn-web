@@ -51,7 +51,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.FileSystem.Cnds.OnFileOperationError,
 		C3.JavaScriptInEvents.Settings_Event30_Act1,
 		C3.Plugins.Keyboard.Cnds.OnKey,
-		C3.JavaScriptInEvents.Menu_Event1_Act1
+		C3.JavaScriptInEvents.Menu_Event1_Act1,
+		C3.JavaScriptInEvents.Menu_Event2_Act1
 	];
 };
 self.C3_JsPropNameTable = [

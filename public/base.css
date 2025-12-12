@@ -52,6 +52,14 @@
 	/*color: rgb(234,234,234);*/
 }
 
+.start {
+	font-family: 'Merriweather-Regular', 'Merriweather-Bold', 'Merriweather-Italic';
+	font-size: min(3vmin, calc(3vmax / 16 * 9)); 
+	text-align: center;
+	vertical-align: center;
+	color: rgb(0, 0, 0);
+}
+
 .text-hover {
 	font-size: min(3.3vmin, calc(3.3vmax / 16 * 9));
 }

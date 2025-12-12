@@ -1259,7 +1259,7 @@ export default class SettingsManager extends EventTarget {
 	}
 	
 	async startMenu() {
-		videoManager.play('menu', 'ui', [960, 540], true);
+		videoManager.play('menu', 'preUi', [960, 540], true);
 		audioManager.play('int', 1, true);
 		const change = [];
 		await this.runtime.storage.getItem('autosave')

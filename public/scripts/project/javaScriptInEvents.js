@@ -69,6 +69,12 @@ const scriptsInEvents = {
 		const errCallback = () => console.log('Неуспешно');
 		
 		await settingsManager.saveFiles('autosave', JSON.stringify(autosave), 'save', callback, errCallback);*/
+	},
+
+	async Menu_Event2_Act1(runtime, localVars)
+	{
+		const startText = runtime.getInstanceByUid(19); 
+		startText.destroy();
 	}
 };
 
