@@ -1446,7 +1446,7 @@ export class SVGPicture extends globalThis.IHTMLElementInstance {
 		
 		return new Promise(async (resolve, reject) => {
 			try {
-				await svgImage.setContent(`<img id="img_svg" src="./svg/${SVGPicture.instances[name].name}.svg">`);
+				await svgImage.setContent(`<img id="img_svg" src="https://s3.twcstorage.ru/fd0dc0bd-caravan-game-ommipn//svg/${SVGPicture.instances[name].name}.svg">`);
 				svgImage.setSize(...size);
 				svgImage.name = name;
 				SVGPicture.currentInstances[name] = svgImage;
